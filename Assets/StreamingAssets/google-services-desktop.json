@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 0
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "949794955319-375aed48hno16oocpcbaqjpehrg7b906.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDPmkye6TCKKQTRiawvzbDrFOC_zT1TxE"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:949794955319:ios:1d1b37af2510aa1b", 
+        "android_client_info": {
+          "package_name": "com.XWomen.regexmon"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "regexomon.appspot.com", 
+    "project_id": "regexomon", 
+    "firebase_url": "https://regexomon.firebaseio.com", 
+    "project_number": "949794955319"
+  }
+}
