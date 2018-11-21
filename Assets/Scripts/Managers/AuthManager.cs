@@ -27,7 +27,7 @@ public class AuthManager : MonoBehaviour {
         auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
         {
             if (task.IsFaulted || task.IsCanceled) {
-                Debug.LogError("Sorry, here was an error creating your account. ERROR: " + task.Exception);
+                Debug.LogError("Sorry, there was an error creating your account. ERROR: " + task.Exception);
                 return;
             } else if (task.IsCompleted) {
                 Firebase.Auth.FirebaseUser newPlayer = task.Result;
