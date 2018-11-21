@@ -170,7 +170,7 @@ PlayerSettings:
   keepLoadedShadersAlive: 0
   StripUnusedMeshComponents: 1
   VertexChannelCompressionMask: 4054
-  iPhoneSdkVersion: 988
+  iPhoneSdkVersion: 989
   iOSTargetOSVersionString: 8.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
@@ -581,6 +581,7 @@ PlayerSettings:
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 0
   apiCompatibilityLevelPerPlatform:
+    Standalone: 1
     iOS: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
