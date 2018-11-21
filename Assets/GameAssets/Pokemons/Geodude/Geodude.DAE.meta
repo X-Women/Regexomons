@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 9aa15b3191f1d4539ac4292c1911b46d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: _01_pm0074_00
+    100002: _02_Origin
+    100004: _03_Waist
+    100006: _04_EndWaist
+    100008: _05_Head
+    100010: _06_EndHead
+    100012: _07_Jaw
+    100014: _08_EndJaw
+    100016: _09_LArm
+    100018: _10_LForeArm
+    100020: _11_LHand
+    100022: _12_EndLHand
+    100024: _13_LFingerA1
+    100026: _14_LFingerA2
+    100028: _15_EndLFingerA2
+    100030: _16_LFingerB1
+    100032: _17_LFingerB2
+    100034: _18_LFingerB3
+    100036: _19_EndLFingerB3
+    100038: _20_LFingerC1
+    100040: _21_LFingerC2
+    100042: _22_LFingerC3
+    100044: _23_EndLFingerC3
+    100046: _24_LFingerD1
+    100048: _25_LFingerD2
+    100050: _26_LFingerD3
+    100052: _27_EndLFingerD3
+    100054: _28_LFingerE1
+    100056: _29_LFingerE2
+    100058: _30_LFingerE3
+    100060: _31_EndLFingerE3
+    100062: _32_RArm
+    100064: _33_RForeArm
+    100066: _34_RHand
+    100068: _35_EndRHand
+    100070: _36_RFingerA1
+    100072: _37_RFingerA2
+    100074: _38_EndRFingerA2
+    100076: _39_RFingerB1
+    100078: _40_RFingerB2
+    100080: _41_RFingerB3
+    100082: _42_EndRFingerB3
+    100084: _43_RFingerC1
+    100086: _44_RFingerC2
+    100088: _45_RFingerC3
+    100090: _46_EndRFingerC3
+    100092: _47_RFingerD1
+    100094: _48_RFingerD2
+    100096: _49_RFingerD3
+    100098: _50_EndRFingerD3
+    100100: _51_RFingerE1
+    100102: _52_RFingerE2
+    100104: _53_RFingerE3
+    100106: _54_EndRFingerE3
+    100108: _55_pm0074_00_BodySkin
+    100110: _56_pm0074_00_IrisSkin
+    100112: Geodude
+    100114: //RootNode
+    400000: _01_pm0074_00
+    400002: _02_Origin
+    400004: _03_Waist
+    400006: _04_EndWaist
+    400008: _05_Head
+    400010: _06_EndHead
+    400012: _07_Jaw
+    400014: _08_EndJaw
+    400016: _09_LArm
+    400018: _10_LForeArm
+    400020: _11_LHand
+    400022: _12_EndLHand
+    400024: _13_LFingerA1
+    400026: _14_LFingerA2
+    400028: _15_EndLFingerA2
+    400030: _16_LFingerB1
+    400032: _17_LFingerB2
+    400034: _18_LFingerB3
+    400036: _19_EndLFingerB3
+    400038: _20_LFingerC1
+    400040: _21_LFingerC2
+    400042: _22_LFingerC3
+    400044: _23_EndLFingerC3
+    400046: _24_LFingerD1
+    400048: _25_LFingerD2
+    400050: _26_LFingerD3
+    400052: _27_EndLFingerD3
+    400054: _28_LFingerE1
+    400056: _29_LFingerE2
+    400058: _30_LFingerE3
+    400060: _31_EndLFingerE3
+    400062: _32_RArm
+    400064: _33_RForeArm
+    400066: _34_RHand
+    400068: _35_EndRHand
+    400070: _36_RFingerA1
+    400072: _37_RFingerA2
+    400074: _38_EndRFingerA2
+    400076: _39_RFingerB1
+    400078: _40_RFingerB2
+    400080: _41_RFingerB3
+    400082: _42_EndRFingerB3
+    400084: _43_RFingerC1
+    400086: _44_RFingerC2
+    400088: _45_RFingerC3
+    400090: _46_EndRFingerC3
+    400092: _47_RFingerD1
+    400094: _48_RFingerD2
+    400096: _49_RFingerD3
+    400098: _50_EndRFingerD3
+    400100: _51_RFingerE1
+    400102: _52_RFingerE2
+    400104: _53_RFingerE3
+    400106: _54_EndRFingerE3
+    400108: _55_pm0074_00_BodySkin
+    400110: _56_pm0074_00_IrisSkin
+    400112: Geodude
+    400114: //RootNode
+    2100000: Eye
+    2100002: Body
+    2100004: LIris
+    2100006: RIris
+    4300000: Geodude
+    9500000: //RootNode
+    13700000: Geodude
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
