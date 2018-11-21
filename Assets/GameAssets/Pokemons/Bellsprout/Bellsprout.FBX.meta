@@ -1,0 +1,252 @@
+fileFormatVersion: 2
+guid: 12df619b2e56a468d9fb164ebc94621c
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: 001 pm0069_00
+    100002: 002 Origin
+    100004: 003 Waist
+    100006: 004 Hips
+    100008: 005 EndHips
+    100010: 006 LThigh
+    100012: 007 LLeg1
+    100014: 008 LLeg2
+    100016: 009 LLeg3
+    100018: 010 LFoot1
+    100020: 011 LFoot2
+    100022: 012 EndLFoot2
+    100024: 013 LToeA1
+    100026: 014 LToeA2
+    100028: 015 LToeA3
+    100030: 016 EndLToeA3
+    100032: 017 LToeA4
+    100034: 018 EndLToeA4
+    100036: 019 LToeB1
+    100038: 020 LToeB2
+    100040: 021 LToeB3
+    100042: 022 EndLToeB3
+    100044: 023 RThigh
+    100046: 024 RLeg1
+    100048: 025 RLeg2
+    100050: 026 RLeg3
+    100052: 027 RFoot1
+    100054: 028 RFoot2
+    100056: 029 EndRFoot2
+    100058: 030 RToeC
+    100060: 031 EndRToeC
+    100062: 032 RToeA1
+    100064: 033 RToeA2
+    100066: 034 RToeA3
+    100068: 035 EndRToeA3
+    100070: 036 RToeB1
+    100072: 037 RToeB2
+    100074: 038 RToeB3
+    100076: 039 EndRToeB3
+    100078: 040 RToeB4
+    100080: 041 EndRToeB4
+    100082: 042 Spine1
+    100084: 043 Spine2
+    100086: 044 Spine3
+    100088: 045 LShoulder
+    100090: 046 LArm
+    100092: 047 LForeArm
+    100094: 048 LHand
+    100096: 049 EndLHand
+    100098: 050 RShoulder
+    100100: 051 RArm
+    100102: 052 RForeArm
+    100104: 053 RHand
+    100106: 054 EndRHand
+    100108: 055 Spine4
+    100110: 056 Spine5
+    100112: 057 Neck
+    100114: 058 Head
+    100116: 059 EndHead
+    100118: 060 Jaw
+    100120: 061 EndJaw
+    100122: 062 FeelerA
+    100124: 063 EndFeelerA
+    100126: 064 FeelerB
+    100128: 065 EndFeelerB
+    100130: 066 LFeeler
+    100132: 067 EndLFeeler
+    100134: 068 LFeelerA
+    100136: 069 EndLFeelerA
+    100138: 070 LFeelerB
+    100140: 071 EndLFeelerB
+    100142: 072 RFeeler
+    100144: 073 EndRFeeler
+    100146: 074 RFeelerA
+    100148: 075 EndRFeelerA
+    100150: 076 RFeelerB
+    100152: 077 EndRFeelerB
+    100154: 078 pm0069_00_Skin
+    100156: Bellsprout
+    100158: //RootNode
+    400000: 001 pm0069_00
+    400002: 002 Origin
+    400004: 003 Waist
+    400006: 004 Hips
+    400008: 005 EndHips
+    400010: 006 LThigh
+    400012: 007 LLeg1
+    400014: 008 LLeg2
+    400016: 009 LLeg3
+    400018: 010 LFoot1
+    400020: 011 LFoot2
+    400022: 012 EndLFoot2
+    400024: 013 LToeA1
+    400026: 014 LToeA2
+    400028: 015 LToeA3
+    400030: 016 EndLToeA3
+    400032: 017 LToeA4
+    400034: 018 EndLToeA4
+    400036: 019 LToeB1
+    400038: 020 LToeB2
+    400040: 021 LToeB3
+    400042: 022 EndLToeB3
+    400044: 023 RThigh
+    400046: 024 RLeg1
+    400048: 025 RLeg2
+    400050: 026 RLeg3
+    400052: 027 RFoot1
+    400054: 028 RFoot2
+    400056: 029 EndRFoot2
+    400058: 030 RToeC
+    400060: 031 EndRToeC
+    400062: 032 RToeA1
+    400064: 033 RToeA2
+    400066: 034 RToeA3
+    400068: 035 EndRToeA3
+    400070: 036 RToeB1
+    400072: 037 RToeB2
+    400074: 038 RToeB3
+    400076: 039 EndRToeB3
+    400078: 040 RToeB4
+    400080: 041 EndRToeB4
+    400082: 042 Spine1
+    400084: 043 Spine2
+    400086: 044 Spine3
+    400088: 045 LShoulder
+    400090: 046 LArm
+    400092: 047 LForeArm
+    400094: 048 LHand
+    400096: 049 EndLHand
+    400098: 050 RShoulder
+    400100: 051 RArm
+    400102: 052 RForeArm
+    400104: 053 RHand
+    400106: 054 EndRHand
+    400108: 055 Spine4
+    400110: 056 Spine5
+    400112: 057 Neck
+    400114: 058 Head
+    400116: 059 EndHead
+    400118: 060 Jaw
+    400120: 061 EndJaw
+    400122: 062 FeelerA
+    400124: 063 EndFeelerA
+    400126: 064 FeelerB
+    400128: 065 EndFeelerB
+    400130: 066 LFeeler
+    400132: 067 EndLFeeler
+    400134: 068 LFeelerA
+    400136: 069 EndLFeelerA
+    400138: 070 LFeelerB
+    400140: 071 EndLFeelerB
+    400142: 072 RFeeler
+    400144: 073 EndRFeeler
+    400146: 074 RFeelerA
+    400148: 075 EndRFeelerA
+    400150: 076 RFeelerB
+    400152: 077 EndRFeelerB
+    400154: 078 pm0069_00_Skin
+    400156: Bellsprout
+    400158: //RootNode
+    2100000: Body00
+    2100002: Eye
+    4300000: Bellsprout
+    9500000: //RootNode
+    13700000: Bellsprout
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
