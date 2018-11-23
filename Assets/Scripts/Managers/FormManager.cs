@@ -4,56 +4,102 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Firebase;
+using Firebase.Auth;
+using UnityEngine.SceneManagement;
 
-public class FormManager : MonoBehaviour {
+public class FormManager : MonoBehaviour
+{
 
-  public InputField emailInput;
-  public InputField passwordInput;
+    public InputField emailInput;
+    public InputField passwordInput;
 
-  public Button signUpButton;
-  public Button loginButton;
+    public Button signUpButton;
+    public Button loginButton;
 
-  public Text statusText;
+    public Text statusText;
 
-  public AuthManager authManager;
+    public AuthManager authManager;
 
-  void Awake () {
+    void Awake()
+    {
         ToggleButtonStates(false);
-  }
+
+        //Delegate subsriptions
+        authManager.authCallback += HandleAuthCallback;
+    }
     //&& Regex.IsMatch(email, regexPattern)
-    public void ValidateEmail() {
+    public void ValidateEmail()
+    {
         string email = emailInput.text;
         var regexPattern = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
         Debug.Log("HelloBethany");
-        if (email != "" ) {
+        if (email != "" && Regex.IsMatch(email, regexPattern))
+        {
             Debug.Log("HelloWorld");
-        ToggleButtonStates (true);
-      } else {
-        ToggleButtonStates(false);
-      }
-  }
+            ToggleButtonStates(true);
+        }
+        else
+        {
+            ToggleButtonStates(false);
+        }
+    }
 
-  public void OnSignUp () {
-        Debug.Log("HELLO CLASS");
-        authManager.SignUpNewUser (emailInput.text, passwordInput.text);
+    public void OnSignUp()
+    {
 
-    Debug.Log("sign up");
-  }
+        authManager.SignUpNewUser(emailInput.text, passwordInput.text);
 
-  public void OnLogin () {
-    Debug.Log("login");
-  }
+        Debug.Log("sign up");
+    }
 
+    public void OnLogin()
+    {
+        Debug.Log("login");
+    }
 
-  private void ToggleButtonStates(bool toState) {
+    IEnumerator HandleAuthCallback(Task<Firebase.Auth.FirebaseUser> task, string operation)
+    {
+        if (task.IsFaulted || task.IsCanceled)
+        {
+            Debug.Log("not working");
+            Debug.Log("task.IsFaulted");
+            Debug.Log(task.IsFaulted);
+            Debug.Log("task.IsCanceled");
+            Debug.Log(task.IsCanceled);
 
-    signUpButton.interactable = toState;
-    loginButton.interactable = toState;
-  }
+            UpdateStatus("There was an error creating your account.");
+        }
+        else if (task.IsCompleted)
+        {
+            Firebase.Auth.FirebaseUser newPlayer = task.Result;
+            Debug.Log("Working!!!");
+            UpdateStatus("Game is loading...");
 
-  private void UpdateStatus(string message) {
-    statusText.text = message;
-  }
+            yield return new WaitForSeconds(1.5f);
+            //scene to change to 
+            SceneManager.LoadScene("MapScene"); 
+        }
+    }
+
+    //to clean up our subscribing methods, use OnDestroy
+    void OnDestroy()
+    {
+        authManager.authCallback -= HandleAuthCallback;
+    }
+
+    private void ToggleButtonStates(bool toState)
+    {
+
+        signUpButton.interactable = toState;
+        loginButton.interactable = toState;
+    }
+
+    private void UpdateStatus(string message)
+    {
+        statusText.text = message;
+    }
 
 }
