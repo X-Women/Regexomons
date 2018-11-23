@@ -57,6 +57,7 @@ public class FormManager : MonoBehaviour
 
     public void OnLogin()
     {
+        authManager.LoginUser(emailInput.text, passwordInput.text);
         Debug.Log("login");
     }
 

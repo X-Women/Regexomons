@@ -44,4 +44,12 @@ public class AuthManager : MonoBehaviour
         });
     }
 
+    public void LoginUser(string email, string password)
+    {
+        auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
+        {
+            StartCoroutine(authCallback(task, "login"));
+        });
+    }
+
 }
