@@ -35,10 +35,8 @@ public class FormManager : MonoBehaviour
         string email = emailInput.text;
         var regexPattern = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
-        Debug.Log("HelloBethany");
         if (email != "" && Regex.IsMatch(email, regexPattern))
         {
-            Debug.Log("HelloWorld");
             ToggleButtonStates(true);
         }
         else
@@ -57,6 +55,7 @@ public class FormManager : MonoBehaviour
 
     public void OnLogin()
     {
+        authManager.LoginUser(emailInput.text, passwordInput.text);
         Debug.Log("login");
     }
 
@@ -64,18 +63,20 @@ public class FormManager : MonoBehaviour
     {
         if (task.IsFaulted || task.IsCanceled)
         {
-            Debug.Log("not working");
-            Debug.Log("task.IsFaulted");
-            Debug.Log(task.IsFaulted);
-            Debug.Log("task.IsCanceled");
-            Debug.Log(task.IsCanceled);
-
             UpdateStatus("There was an error creating your account.");
         }
         else if (task.IsCompleted)
         {
-            Firebase.Auth.FirebaseUser newPlayer = task.Result;
-            Debug.Log("Working!!!");
+            if (operation == "sign up") {
+                Firebase.Auth.FirebaseUser newPlayer = task.Result;
+               
+                Debug.LogFormat("Welcome to Regexomon {0}!!!!!", newPlayer.Email);
+
+                Player player = new Player(newPlayer.Email, 1, 0, "null");
+                DatabaseManager.sharedInstance.CreateNewPlayer(player, newPlayer.UserId);
+            }
+
+
             UpdateStatus("Game is loading...");
 
             yield return new WaitForSeconds(1.5f);
