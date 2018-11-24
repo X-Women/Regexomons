@@ -11,11 +11,11 @@ public class Router : MonoBehaviour {
 
     public static DatabaseReference Players()
     {
-        return baseRef.Child("Player");
+        return baseRef.Child("Players");
     }
     public static DatabaseReference PlayerWithUID(string uid)
     {
-        return baseRef.Child("Player").Child(uid);
+        return baseRef.Child("Players").Child(uid);
     }
 
     public static DatabaseReference Questions()

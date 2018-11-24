@@ -16,8 +16,6 @@ public class DatabaseManager : MonoBehaviour {
         }
         DontDestroyOnLoad(gameObject);
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://regexomon.firebaseio.com/");
-        Debug.Log(Router.Questions());
-        Debug.Log(Router.Players());
 
     }
 	
