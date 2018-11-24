@@ -65,18 +65,19 @@ public class FormManager : MonoBehaviour
     {
         if (task.IsFaulted || task.IsCanceled)
         {
-            Debug.Log("not working");
-            Debug.Log("task.IsFaulted");
-            Debug.Log(task.IsFaulted);
-            Debug.Log("task.IsCanceled");
-            Debug.Log(task.IsCanceled);
-
             UpdateStatus("There was an error creating your account.");
         }
         else if (task.IsCompleted)
         {
-            Firebase.Auth.FirebaseUser newPlayer = task.Result;
-            Debug.Log("Working!!!");
+            if(operation == "sign_up") {
+                Firebase.Auth.FirebaseUser newUser = task.Result;
+                Debug.LogFormat("Welcome to Regexomon {0}", newUser.Email);
+
+                User1 user = new User1(newUser.Email, 1, 0);
+                DatabaseManager.sharedInstance.CreateNewUser(user, newUser.UserId);
+            }
+
+
             UpdateStatus("Game is loading...");
 
             yield return new WaitForSeconds(1.5f);
