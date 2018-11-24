@@ -17,15 +17,15 @@ public class DatabaseManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://regexomon.firebaseio.com/");
         Debug.Log(Router.Questions());
-        Debug.Log(Router.Users());
+        Debug.Log(Router.Players());
 
     }
 	
-	public void CreateNewUser(User1 user, string uId)
+	public void CreateNewPlayer(Player player, string uid)
     {
-        string userJSON = JsonUtility.ToJson(user);
+        string playerJSON = JsonUtility.ToJson(player);
         //could also pass a ditionary or singal value in SetRawJsonValueAsync
-        Router.UserWithID(uId).SetRawJsonValueAsync(userJSON);
+        Router.PlayerWithUID(uid).SetRawJsonValueAsync(playerJSON);
     }
 }
  

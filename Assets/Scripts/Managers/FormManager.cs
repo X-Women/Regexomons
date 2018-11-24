@@ -69,12 +69,14 @@ public class FormManager : MonoBehaviour
         }
         else if (task.IsCompleted)
         {
-            if(operation == "sign_up") {
-                Firebase.Auth.FirebaseUser newUser = task.Result;
-                Debug.LogFormat("Welcome to Regexomon {0}", newUser.Email);
+            Debug.Log("TESTING!!!!!: " + operation);
+            if (operation == "sign up") {
+                Firebase.Auth.FirebaseUser newPlayer = task.Result;
+               
+                Debug.LogFormat("Welcome to Regexomon {0}!!!!!", newPlayer.Email);
 
-                User1 user = new User1(newUser.Email, 1, 0);
-                DatabaseManager.sharedInstance.CreateNewUser(user, newUser.UserId);
+                Player player = new Player(newPlayer.Email, 1, 0);
+                DatabaseManager.sharedInstance.CreateNewPlayer(player, newPlayer.UserId);
             }
 
 
