@@ -9,6 +9,7 @@ using Firebase;
 using Firebase.Auth;
 using UnityEngine.SceneManagement;
 
+
 public class FormManager : MonoBehaviour
 {
 
@@ -61,6 +62,7 @@ public class FormManager : MonoBehaviour
 
     IEnumerator HandleAuthCallback(Task<Firebase.Auth.FirebaseUser> task, string operation)
     {
+      
         if (task.IsFaulted || task.IsCanceled)
         {
             UpdateStatus("There was an error creating your account.");

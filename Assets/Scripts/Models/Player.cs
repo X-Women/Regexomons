@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player {
 
@@ -20,12 +20,19 @@ public class Player {
     //}
 
 
-    public Player(string email, int level, int score, string regexomon) 
+    public Player(string email, int score, int level, string regexomon) 
     {
         this.email = email;
-        this.level = level;
         this.score = score;
+        this.level = level;
         this.regexomon = regexomon;
+    }
+
+    public Player(IDictionary<string, object> dict) {
+        this.email = dict["email"].ToString();
+        this.score = Convert.ToInt32(dict["score"]);
+        this.level = Convert.ToInt32(dict["level"]);
+        this.regexomon = dict["regexomon"].ToString();
     }
 
 }

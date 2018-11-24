@@ -18,6 +18,7 @@ public class Router : MonoBehaviour {
         return baseRef.Child("Players").Child(uid);
     }
 
+
     public static DatabaseReference Questions()
     {
         return baseRef.Child("Level1-Questions");
