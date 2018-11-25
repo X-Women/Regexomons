@@ -20,7 +20,7 @@ public class RegexomonManager : MonoBehaviour
                 var regexomonDictionary = (IDictionary<string, object>)regexomon.Value;
                 Regexomon newRegexomon = new Regexomon(regexomonDictionary);
                 //logs all of the Regexomons Names
-                Debug.Log(newRegexomon.Name);
+                Debug.Log(newRegexomon.name);
                 tempList.Add(newRegexomon);
             }
         });

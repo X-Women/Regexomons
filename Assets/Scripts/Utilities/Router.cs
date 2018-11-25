@@ -21,19 +21,19 @@ public class Router : MonoBehaviour {
 
     public static DatabaseReference Regexomons()
     {
-        return baseRef.Child("Pokemon");
+        return baseRef.Child("Regexomon");
     }
     public static DatabaseReference RegexomonsWithID(string id)
     {
-        return baseRef.Child("Pokemon").Child(id);
+        return baseRef.Child("Regexomon").Child(id);
     }
 
 
-    public static DatabaseReference QuestionsLevelOne()
+    public static DatabaseReference GetLevelOneQuestions()
     {
         return baseRef.Child("Level1-Questions");
     }
-    public static DatabaseReference QuestionLevelOne(string questId)
+    public static DatabaseReference GetQuestion(string questId)
     {
         return baseRef.Child("Level1-Questions").Child(questId);
     }

@@ -28,13 +28,13 @@ public class QuestionSet
     public QuestionSet(IDictionary<string, object> dictionary)
     {
         try {
-            this.question = dictionary["Question"].ToString();
-            this.match = dictionary["Match"].ToString();
-            this.caseSensitive = Convert.ToBoolean(dictionary["CaseSensitive"]);
-            this.right = dictionary["Right"].ToString();
+            this.question = dictionary["question"].ToString();
+            this.match = dictionary["match"].ToString();
+            this.caseSensitive = Convert.ToBoolean(dictionary["caseSensitive"]);
+            this.right = dictionary["right"].ToString();
 
-            var tempWrong = dictionary["Wrong"];
-            Debug.Log("Type: " + tempWrong.GetType().FullName);
+            var tempWrong = dictionary["wrong"];
+            //Debug.Log("Type: " + tempWrong.GetType().FullName);
             var objList = ((List<object>)tempWrong);
             var list = new List<string>();
             foreach(var x in objList) 

@@ -5,16 +5,20 @@ using UnityEngine;
 
 public class Regexomon
 {
-    public string Name;
+    public string name;
+    public string imageUrl;
 
-    public Regexomon(string Name)
+    public Regexomon(string name, string imageUrl)
     {
-        this.Name = Name;
+        this.name = name;
+        this.imageUrl = imageUrl;
+
     }
 
     public Regexomon(IDictionary<string, object> dictionary)
     {
-        this.Name = dictionary["Name"].ToString();
+        this.name = dictionary["name"].ToString();
+        this.imageUrl = dictionary["imageUrl"].ToString();
     }
 
 }
