@@ -28,7 +28,8 @@ public class DatabaseManager : MonoBehaviour
     public void CreateNewPlayer(Player player, string uid)
     {
         string playerJSON = JsonUtility.ToJson(player);
-        //could also pass a ditionary or singal value in SetRawJsonValueAsync
+
+        //could also pass a dictionary or singal value in SetRawJsonValueAsync
         Router.PlayerWithUID(uid).SetRawJsonValueAsync(playerJSON);
     }
 

@@ -12,6 +12,7 @@ public class RegexomonManager : MonoBehaviour
 
     void Awake()
     {
+        tempList.Clear();
         Router.Regexomons().GetValueAsync().ContinueWith(task =>
         {
             DataSnapshot regexomons = task.Result;
