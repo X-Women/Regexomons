@@ -18,11 +18,22 @@ public class Router : MonoBehaviour {
         return baseRef.Child("Players").Child(uid);
     }
 
-    public static DatabaseReference Questions()
+
+    public static DatabaseReference Regexomons()
+    {
+        return baseRef.Child("Regexomon");
+    }
+    public static DatabaseReference RegexomonsWithID(string id)
+    {
+        return baseRef.Child("Regexomon").Child(id);
+    }
+
+
+    public static DatabaseReference GetLevelOneQuestions()
     {
         return baseRef.Child("Level1-Questions");
     }
-    public static DatabaseReference Question(string questId)
+    public static DatabaseReference GetQuestion(string questId)
     {
         return baseRef.Child("Level1-Questions").Child(questId);
     }

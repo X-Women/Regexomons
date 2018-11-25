@@ -70,7 +70,7 @@ public class FormManager : MonoBehaviour
             if (operation == "sign up") {
                 Firebase.Auth.FirebaseUser newPlayer = task.Result;
                
-                Debug.LogFormat("Welcome to Regexomon {0}!!!!!", newPlayer.Email);
+                Debug.LogFormat("Welcome to Regexomon {0}!", newPlayer.Email);
 
                 Player player = new Player(newPlayer.Email, 1, 0, "null");
                 DatabaseManager.sharedInstance.CreateNewPlayer(player, newPlayer.UserId);
