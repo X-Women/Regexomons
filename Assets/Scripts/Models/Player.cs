@@ -28,4 +28,12 @@ public class Player {
         this.regexomon = regexomon;
     }
 
+    public Player(IDictionary<string, object> dictionary) {
+        this.email = dictionary["email"].ToString();
+        this.level = Convert.ToInt32(dictionary["level"]);
+        this.score = Convert.ToInt32(dictionary["score"]);
+        //change this later
+        this.regexomon = dictionary["regexomon"].ToString(); 
+    }
+
 }
