@@ -13,10 +13,17 @@ public class Router : MonoBehaviour {
     {
         return baseRef.Child("Players");
     }
+
     public static DatabaseReference PlayerWithUID(string uid)
     {
         return baseRef.Child("Players").Child(uid);
     }
+
+
+    //public static DatabaseReference PlayerRegexomon(string uid)
+    //{
+    //    return baseRef.Child("regexomon");
+    //}
 
 
     public static DatabaseReference Regexomons()

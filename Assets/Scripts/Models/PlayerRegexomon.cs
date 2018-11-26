@@ -20,6 +20,7 @@ public class PlayerRegexomon
 
     }
 
+
     public PlayerRegexomon(IDictionary<string, object> dictionary)
     {
         this.name = dictionary["name"].ToString();
