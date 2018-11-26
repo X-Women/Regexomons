@@ -13,6 +13,7 @@ public class TestQuest : MonoBehaviour
 
     //public static List<QuestionSet> levelOneQuestions = new List<QuestionSet>();
 
+
     void Awake()
     {
         var CurrentUserId = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
@@ -37,7 +38,7 @@ public class TestQuest : MonoBehaviour
             {
                 var regDictionary = (IDictionary<string, object>)regexomon.Value;
                 PlayerRegexomon newPlayerRegexomon = new PlayerRegexomon(regDictionary);
-                Debug.Log("DID I DO IT?" + newPlayerRegexomon.name);
+                Debug.Log("DID I DO IT LALA?" + newPlayerRegexomon.name);
             }
 
         });
