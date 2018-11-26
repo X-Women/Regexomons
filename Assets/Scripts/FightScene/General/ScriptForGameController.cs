@@ -64,6 +64,13 @@ public class ScriptForGameController : MonoBehaviour {
 
             case "correctAnswer":
                 InfoText.text = "PIKACHU used QUICKATTACK!";
+                GameStatus = "charizardAttacked";
+                // ConfirmButton.gameObject.SetActive(true);
+                break;
+
+            case "charizardAttacked":
+                InfoText.text = "Charizard's health has gone down";
+                GameStatus = "selectOption";
                 break;
 
             case "wrongAnswer":
