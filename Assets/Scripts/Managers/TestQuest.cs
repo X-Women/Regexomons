@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Firebase.Auth;
+using Firebase.Database;
 
 public class TestQuest : MonoBehaviour {
 
@@ -9,6 +11,8 @@ public class TestQuest : MonoBehaviour {
     QuestionManager runs when login screen appears. It needs to run here because 
     QuestionManager.levelOneQuestions needs to get it's data before use
     */
+
+    //public static string CurrentUserId = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
 
     //this file is just for practice, and can be removed
     void Awake () {
