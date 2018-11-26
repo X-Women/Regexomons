@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScriptForGameController : MonoBehaviour {
 
@@ -12,6 +13,9 @@ public class ScriptForGameController : MonoBehaviour {
     public GameObject ConfirmButton;
     public GameObject FightButtons;
     public GameObject StartButtons;
+    public GameObject EnemyPokemonUI;
+    public GameObject SelectStartButton;
+    public GameObject PikachuUI;
 
     // Use this for initialization
     void Start () {
@@ -22,6 +26,23 @@ public class ScriptForGameController : MonoBehaviour {
     {
         switch(GameStatus)
         { 
+            case "enemyIsDead":
+                InfoText.text = "CHARIZARD is close to capturing!";
+                GameStatus = "loadLocationScene";
+                ConfirmButton.SetActive(true);
+                break;
+
+            case "loadLocationScene":
+                // SceneManager.LoadScene(Scene Number)
+                Debug.Log("Loading new scene!");
+                break;
+
+            case "PikachuIsDead":
+                InfoText.text = "Time to brush up on your RegEX!";
+                GameStatus = "loadLocationScene";
+                ConfirmButton.SetActive(true);
+                break;
+
             case "selectOption":
                 InfoText.text = "";
                 ConfirmButton.gameObject.SetActive(false);
@@ -30,8 +51,19 @@ public class ScriptForGameController : MonoBehaviour {
                 FightButtons.gameObject.SetActive(false);
                 break;
 
+            case "StartButtonsAppear":
+                InfoText.text = "";
+                SelectStartButton.gameObject.SetActive(true);
+                ConfirmButton.gameObject.SetActive(false);
+                FightButtons.gameObject.SetActive(false);
+                StartButtons.gameObject.SetActive(true);
+                break;
+
             case "enemyAppeared":
-                InfoText.text = "GO! PIKACHU!";
+                InfoText.text = "I choose you! GO! REGEXACHU!";
+                PikachuUI.gameObject.SetActive(true);
+                ConfirmButton.SetActive(true);
+                GameStatus = "StartButtonsAppear";
                 break;
 
             case "ashUsedPokeball":
@@ -45,16 +77,16 @@ public class ScriptForGameController : MonoBehaviour {
             case "enemyAttacks":
                 // Debug.Log("enemy attack works");
                 // CharizardControlScript.Instance.Fly();
-                int RandomAttack = Random.Range(0,1);
+                int RandomAttack = Random.Range(0,2);
                 if(RandomAttack == 0){
                     InfoText.text = "CHARIZARD used FLY!";
                     //invoke the Fly method
                     CharizardControlScript.Instance.Fly();
                 }
-                else if(RandomAttack == 1)
+                else if(RandomAttack == 1 )
                 {
                     InfoText.text = "CHARIZARD used FLAMETHROWER!";
-                    //invoke the flamethrower method
+                    CharizardControlScript.Instance.Flamethrower();
                 }
 
                 // ConfirmButton.gameObject.SetActive(false);
@@ -63,7 +95,22 @@ public class ScriptForGameController : MonoBehaviour {
                 break;
 
             case "correctAnswer":
-                InfoText.text = "PIKACHU used QUICKATTACK!";
+                // InfoText.text = "PIKACHU used QUICKATTACK!";
+
+                 int PikachuRandomAttack = Random.Range(0,2);
+                if(PikachuRandomAttack == 0){
+                    InfoText.text = "REGEXACHU used QUICKATTACK!";
+                    //invoke the quickattack method
+                    pikachuControlScript.Instance.Growl();
+                }
+                else if(PikachuRandomAttack == 1)
+                {
+                    InfoText.text = "REGEXACHU used THUNDERSHOCK!";
+                     //invoke the thundershock method
+                    pikachuControlScript.Instance.Thundershock();
+            
+                }
+
                 GameStatus = "charizardAttacked";
                 // ConfirmButton.gameObject.SetActive(true);
                 break;
@@ -74,12 +121,15 @@ public class ScriptForGameController : MonoBehaviour {
                 break;
 
             case "wrongAnswer":
-                InfoText.text = "PIKACHU missed QUICKATTACK!";
+                InfoText.text = "REGEXACHU missed QUICKATTACK!";
                 GameStatus="enemyAttacks";
                 break;
             
             case "fightHasStarted":
                 InfoText.text = "Wild CHARIZARD has appeared";
+                EnemyPokemonUI.gameObject.SetActive(true);
+                ConfirmButton.SetActive(true);
+                GameStatus = "enemyAppeared";
                 break;
 
             default:

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharizardCollisionScript : MonoBehaviour {
 
-	public bool collisionWithPikachu = true;
+	public bool collisionWithCharizard = true;
 	// Use this for initialization
 	void OnCollisionEnter (Collision Col)
 	{
@@ -18,7 +18,8 @@ public class CharizardCollisionScript : MonoBehaviour {
 			// Charizard should animate in attacked position
 			// GameObject.FindGameObjectWithTag("CharizardGO").GetComponent<Animator>().Play("fly");
 			GameObject.Find("Pikachu").GetComponent<Animator>().Play("attackFromCharizard");
-			CharizardControlScript.Instance.quickAttackFromPikachu(0f, collisionWithPikachu);
+			pikachuControlScript.Instance.flyAttackFromCharizard(0f, collisionWithCharizard);		
+			// CharizardControlScript.Instance.quickAttackFromPikachu(0f, collisionWithPikachu);
 			// ScriptForGameController.Instance.ConfirmButton.SetActive(true);
 			// put some sound
 			// health bar needs to decrease
