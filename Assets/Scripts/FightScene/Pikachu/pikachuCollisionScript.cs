@@ -12,7 +12,7 @@ public class pikachuCollisionScript : MonoBehaviour {
 		{
 			pikachuControlScript.Instance.pikachuMove = false;
 			// returns pikachu back to his position
-			GameObject.Find("Pikachu").transform.position = GameObject.Find ("MyRegexmon").transform.position;
+			GameObject.Find("Pikachu").transform.position = GameObject.Find ("IdlePikachu").transform.position;
 			// pikachu starts to bop again
 			GameObject.Find("Pikachu").GetComponent<Animator>().Play("pikachuIDLE");
 			// Charizard should animate in attacked position
