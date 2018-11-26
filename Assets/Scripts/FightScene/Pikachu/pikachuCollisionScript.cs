@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class pikachuCollisionScript : MonoBehaviour {
 
+	public bool collisionWPikachu = true;
 	// Use this for initialization
 	void OnCollisionEnter (Collision Col)
 	{
@@ -12,7 +13,7 @@ public class pikachuCollisionScript : MonoBehaviour {
 		{
 			pikachuControlScript.Instance.pikachuMove = false;
 			// returns pikachu back to his position
-			GameObject.Find("Pikachu").transform.position = GameObject.Find ("MyRegexmon").transform.position;
+			GameObject.Find("Pikachu").transform.position = GameObject.Find ("IdlePikachu").transform.position;
 			// pikachu starts to bop again
 			GameObject.Find("Pikachu").GetComponent<Animator>().Play("pikachuIDLE");
 			// Charizard should animate in attacked position
@@ -20,7 +21,7 @@ public class pikachuCollisionScript : MonoBehaviour {
 			// ScriptForGameController.Instance.SelectAnswer.SetActive(false);
 			// ScriptForGameController.Instance.ConfirmButton.SetActive(true);
 			GameObject.FindGameObjectWithTag("CharizardGO").GetComponent<Animator>().Play("collisionWPikachu");
-
+			CharizardControlScript.Instance.quickAttackFromPikachu(0f, collisionWPikachu);				
 			// GameObject.Find("Charizard").GetComponent<Animator>().Play("collisionWPikachu");
 			// put some sound
 			// health bar needs to decrease
