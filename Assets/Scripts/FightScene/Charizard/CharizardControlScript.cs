@@ -55,12 +55,12 @@ public class CharizardControlScript : MonoBehaviour {
 	
 	public void quickAttackFromPikachu(float quickAttackValue, bool collisionWPikachu)
 	{
-		HPBar = GameObject.Find("backgroundColor").GetComponent<Image>();
+		HPBar = GameObject.Find("EnemyHPColor").GetComponent<Image>();
 		CharizardHealth -= quickAttackValue;
 
 		if(collisionWPikachu)
 		{
-			HPBar.fillAmount = CharizardHealth / 100f;
+			HPBar.fillAmount = CharizardHealth / 40f;
 		}
 	}
 

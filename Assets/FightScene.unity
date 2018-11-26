@@ -914,15 +914,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1957690131}
-  - {fileID: 784082005}
-  m_Father: {fileID: 1264199595}
-  m_RootOrder: 3
+  m_Children: []
+  m_Father: {fileID: 1957690131}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214.1, y: 159.1}
+  m_AnchoredPosition: {x: 1.1699982, y: -2.6600342}
   m_SizeDelta: {x: 230, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349567843
@@ -1049,8 +1047,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5180843, y: 3.8610733, z: 3.272127}
-  m_Center: {x: -0.5323488, y: 1.4305364, z: -0.038700562}
+  m_Size: {x: 2.5180843, y: 4.7157145, z: 4.0078597}
+  m_Center: {x: -0.53234875, y: 2.0722466, z: 0.32916567}
 --- !u!54 &466147861
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1424,7 +1422,7 @@ GameObject:
   - component: {fileID: 603267659}
   - component: {fileID: 603267658}
   m_Layer: 5
-  m_Name: Danchu
+  m_Name: Regexachu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1480,7 +1478,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DANACHU
+  m_Text: REGEXACHU
 --- !u!222 &603267659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1665,12 +1663,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 349567842}
-  m_RootOrder: 1
+  m_Father: {fileID: 1264199595}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -55.100006, y: -79.70001}
+  m_AnchoredPosition: {x: -269.2, y: 79.39998}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784082006
@@ -1876,7 +1874,7 @@ GameObject:
   - component: {fileID: 897796344}
   - component: {fileID: 897796343}
   m_Layer: 5
-  m_Name: DanchuLevel
+  m_Name: RegexachuLevel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1949,11 +1947,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400056, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.31
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2707,15 +2705,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.11
+      value: -0.87
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.42
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2739,11 +2737,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2792,6 +2790,10 @@ Prefab:
     - target: {fileID: 100002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_Name
       value: CharizardF
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
@@ -2942,7 +2944,8 @@ RectTransform:
   - {fileID: 2003168347}
   - {fileID: 1280317507}
   - {fileID: 1314148148}
-  - {fileID: 349567842}
+  - {fileID: 784082005}
+  - {fileID: 1957690131}
   m_Father: {fileID: 134299879}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3097,7 +3100,7 @@ Transform:
   m_GameObject: {fileID: 1275470731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 922191776}
   m_Father: {fileID: 0}
@@ -3201,16 +3204,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1304586482}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1646876000}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 1646876000}
+  m_Father: {fileID: 2007722121}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.17, y: 2.66}
+  m_AnchoredPosition: {x: 29.429962, y: -5.8399887}
   m_SizeDelta: {x: 205, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304586484
@@ -3540,7 +3544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pikachuMove: 0
-  quickAttackValue: 20
+  quickAttackValue: 10
 --- !u!1 &1434476673
 GameObject:
   m_ObjectHideFlags: 0
@@ -3732,8 +3736,36 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.162778, z: 1}
-  m_Center: {x: 0, y: 0.7991975, z: 0.00000007526438}
+  m_Size: {x: 1.5617756, y: 1.5294522, z: 1}
+  m_Center: {x: -0.28088757, y: 0.61586034, z: 0.000000057998616}
+--- !u!1 &1530632857
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1530632858}
+  m_Layer: 0
+  m_Name: IdlePikachu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1530632858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1530632857}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3, y: -0.09, z: 1.29}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1544408751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,12 +3793,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1646876000}
-  m_RootOrder: 1
+  m_Father: {fileID: 2007722121}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -55.100006, y: -79.70001}
+  m_AnchoredPosition: {x: -24.5, y: -88.20002}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1544408753
@@ -3984,15 +4016,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1304586483}
-  - {fileID: 1544408752}
-  m_Father: {fileID: 2007722121}
-  m_RootOrder: 2
+  m_Children: []
+  m_Father: {fileID: 1304586483}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -19.400024, y: 41.5}
+  m_AnchoredPosition: {x: -101.33003, y: 12.339996}
   m_SizeDelta: {x: 230, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646876001
@@ -4339,6 +4369,34 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1790966672}
   m_CullTransparentMesh: 0
+--- !u!1 &1825005383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1825005384}
+  m_Layer: 0
+  m_Name: IdleCharizard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1825005384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825005383}
+  m_LocalRotation: {x: 0, y: 0.9968851, z: -0, w: -0.07886783}
+  m_LocalPosition: {x: -0.87, y: 0.37, z: 8.3}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 189.047, z: 0}
 --- !u!1 &1903536124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4537,7 +4595,7 @@ GameObject:
   - component: {fileID: 1957690133}
   - component: {fileID: 1957690132}
   m_Layer: 5
-  m_Name: backgroundColor
+  m_Name: EnemyHPColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4549,16 +4607,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957690130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 349567842}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 349567842}
+  m_Father: {fileID: 1264199595}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.17, y: 2.66}
+  m_AnchoredPosition: {x: -215.27, y: 161.76004}
   m_SizeDelta: {x: 205, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957690132
@@ -4734,7 +4793,8 @@ RectTransform:
   m_Children:
   - {fileID: 603267657}
   - {fileID: 897796342}
-  - {fileID: 1646876000}
+  - {fileID: 1544408752}
+  - {fileID: 1304586483}
   m_Father: {fileID: 1314206489}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4914,7 +4974,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2021947022

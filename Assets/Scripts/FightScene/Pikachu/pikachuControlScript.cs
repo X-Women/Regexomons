@@ -34,6 +34,8 @@ public class pikachuControlScript : MonoBehaviour {
 		 gameObject.GetComponent<Animator>().Play("Attack");
 		 pikachuMove = true;
 		 ScriptForGameController.GameStatus = "correctAnswer";
+		ScriptForGameController.Instance.SelectAnswer.SetActive(false);
+		ScriptForGameController.Instance.ConfirmButton.SetActive(true);
 		 ScriptForGameController.Instance.gameStatusInfoBar();
 	 }
 
