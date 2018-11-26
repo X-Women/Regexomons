@@ -22,33 +22,29 @@ public class TestQuest : MonoBehaviour
         Router.PlayerWithUID(CurrentUserId).GetValueAsync().ContinueWith(task =>
         {
             DataSnapshot user = task.Result;
-            Debug.Log("user : " + user);
-            foreach (DataSnapshot player in user.Children)
+
+        //var playerDictionary = (IDictionary<string, object>)user.Value;
+        //Debug.Log("What is the playerDictionary : " + playerDictionary); //logs What is the playerDictionary : System.Collections.Generic.Dictionary`2[System.String,System.Object]
+        //Player newPlayer = new Player(playerDictionary);
+            //Player newPlayer = user.GetValue(Player);
+            //Debug.Log("What is the new Player : " + newPlayer); //logs nothing 
+        });
+
+        Router.PlayerWithUID(CurrentUserId).Child("regexomon").GetValueAsync().ContinueWith(task =>
+        {
+            DataSnapshot regexomons = task.Result;
+            foreach (DataSnapshot regexomon in regexomons.Children)
             {
-                var playerDictionary = (IDictionary<string, object>)user.Value;
-
-                Debug.Log("What is the playerDictionary : " + playerDictionary);
-
-                Player newPlayer = new Player(playerDictionary);
-                Debug.Log("What is the new Player : " + newPlayer);
-                //levelOneQuestions.Add(newPlayer);
+                var regDictionary = (IDictionary<string, object>)regexomon.Value;
+                PlayerRegexomon newPlayerRegexomon = new PlayerRegexomon(regDictionary);
+                Debug.Log("DID I DO IT?" + newPlayerRegexomon.name);
             }
+
         });
 
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
