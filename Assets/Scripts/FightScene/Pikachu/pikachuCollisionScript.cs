@@ -21,7 +21,8 @@ public class pikachuCollisionScript : MonoBehaviour {
 			// ScriptForGameController.Instance.SelectAnswer.SetActive(false);
 			// ScriptForGameController.Instance.ConfirmButton.SetActive(true);
 			GameObject.FindGameObjectWithTag("CharizardGO").GetComponent<Animator>().Play("collisionWPikachu");
-			CharizardControlScript.Instance.quickAttackFromPikachu(0f, collisionWPikachu);				
+			CharizardControlScript.Instance.quickAttackFromPikachu(0f, collisionWPikachu);		
+			audioControl.Instance.tackleSound.Play();			
 			// GameObject.Find("Charizard").GetComponent<Animator>().Play("collisionWPikachu");
 			// put some sound
 			// health bar needs to decrease

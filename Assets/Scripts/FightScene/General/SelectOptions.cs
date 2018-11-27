@@ -7,11 +7,14 @@ public class SelectOptions : MonoBehaviour {
 	public GameObject StartButtons;
     public GameObject FightButtons;
     public GameObject Items;
+    public GameObject Question;
 	
     public void onFight()
     {
         StartButtons.gameObject.SetActive(false);
         FightButtons.gameObject.SetActive(true);
+        Question.gameObject.SetActive(true);
+
     }
 
     public void onItem()

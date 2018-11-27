@@ -7,7 +7,7 @@ using Firebase.Auth;
 public class ScoreScript : MonoBehaviour {
 
     public static int scoreValue = 0;
-    Text score;
+    public Text score;
 
     // Use this for initialization
     void Start () {

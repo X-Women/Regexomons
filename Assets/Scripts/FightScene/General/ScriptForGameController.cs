@@ -16,6 +16,10 @@ public class ScriptForGameController : MonoBehaviour {
     public GameObject EnemyPokemonUI;
     public GameObject SelectStartButton;
     public GameObject PikachuUI;
+    public GameObject EnemyPokemonHealthBar;
+    public GameObject PokeballForPikachu;
+    public GameObject PikachuHealthBar;
+    public GameObject Items;
 
     // Use this for initialization
     void Start () {
@@ -27,9 +31,10 @@ public class ScriptForGameController : MonoBehaviour {
         switch(GameStatus)
         { 
             case "enemyIsDead":
-                InfoText.text = "CHARIZARD is close to capturing!";
-                GameStatus = "loadLocationScene";
-                ConfirmButton.SetActive(true);
+                InfoText.text = "REGEXIZARD is close to capturing!";
+                // GameStatus = "loadLocationScene";
+                // ConfirmButton.SetActive(true);
+                // StartButtons.SetActive(true);
                 break;
 
             case "loadLocationScene":
@@ -61,17 +66,25 @@ public class ScriptForGameController : MonoBehaviour {
 
             case "enemyAppeared":
                 InfoText.text = "I choose you! GO! REGEXACHU!";
+                PikachuHealthBar.gameObject.SetActive(true);
                 PikachuUI.gameObject.SetActive(true);
+                 audioControl.Instance.pikachuStartSound.Play();
+                PokeballForPikachu.gameObject.SetActive(false);
                 ConfirmButton.SetActive(true);
                 GameStatus = "StartButtonsAppear";
                 break;
 
-            case "ashUsedPokeball":
-                InfoText.text = "ASH uses Pokeball!";
+            case "serenaUsedPokeball":
+                InfoText.text = "SERENA uses Regexball!";
+                ConfirmButton.SetActive(true);
+                // GameStatus = "caughtRegexmon";
                 break;   
 
             case "caughtRegexmon":
-                InfoText.text = "CHARIZARD was caught!";
+                InfoText.text = "REGEXIZARD was caught!";
+                audioControl.Instance.enemyCaughtSound.Play();
+                 audioControl.Instance.fightSound.Stop();
+                GameStatus = "loadLocationScene";
                 break;   
 
             case "enemyAttacks":
@@ -79,13 +92,13 @@ public class ScriptForGameController : MonoBehaviour {
                 // CharizardControlScript.Instance.Fly();
                 int RandomAttack = Random.Range(0,2);
                 if(RandomAttack == 0){
-                    InfoText.text = "CHARIZARD used FLY!";
+                    InfoText.text = "REGEXIZARD used FLY!";
                     //invoke the Fly method
                     CharizardControlScript.Instance.Fly();
                 }
                 else if(RandomAttack == 1 )
                 {
-                    InfoText.text = "CHARIZARD used FLAMETHROWER!";
+                    InfoText.text = "REGEXIZARD used FLAMETHROWER!";
                     CharizardControlScript.Instance.Flamethrower();
                 }
 
@@ -116,7 +129,7 @@ public class ScriptForGameController : MonoBehaviour {
                 break;
 
             case "charizardAttacked":
-                InfoText.text = "Charizard's health has gone down";
+                InfoText.text = "REGEXIZARD's health has gone down";
                 GameStatus = "selectOption";
                 break;
 
@@ -126,8 +139,9 @@ public class ScriptForGameController : MonoBehaviour {
                 break;
             
             case "fightHasStarted":
-                InfoText.text = "Wild CHARIZARD has appeared";
+                InfoText.text = "Wild REGEXIZARD has appeared";
                 EnemyPokemonUI.gameObject.SetActive(true);
+                EnemyPokemonHealthBar.gameObject.SetActive(true);
                 ConfirmButton.SetActive(true);
                 GameStatus = "enemyAppeared";
                 break;
