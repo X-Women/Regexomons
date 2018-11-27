@@ -10,8 +10,7 @@ public class GetPlayerRegexomon : MonoBehaviour
 {
     //Trying to get access to single user
 
-
-    //public static List<QuestionSet> levelOneQuestions = new List<QuestionSet>();
+     //public static List<PlayerRegexomon> regexomonList = new List<PlayerRegexomon>();
 
     void Awake()
     {
@@ -26,7 +25,7 @@ public class GetPlayerRegexomon : MonoBehaviour
             {
                 var regDictionary = (IDictionary<string, object>)regexomon.Value;
                 PlayerRegexomon newPlayerRegexomon = new PlayerRegexomon(regDictionary);
-                Debug.Log("DID I DO IT?" + newPlayerRegexomon.name);
+                Debug.Log("Are these the children?" + newPlayerRegexomon.name);
             }
 
         });

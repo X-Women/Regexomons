@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 222789755641945580}
   - component: {fileID: 114769516674709298}
   - component: {fileID: 114715331191918260}
+  - component: {fileID: 114417890485337104}
   m_Layer: 5
   m_Name: PrefabRegexomon
   m_TagString: Untagged
@@ -130,6 +131,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Regexomon
+--- !u!114 &114417890485337104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1456170640635338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758d6292b2ee349d0909f6204eb53078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  regName: {fileID: 114216133082159502}
+  question: {fileID: 0}
+  answer: {fileID: 0}
 --- !u!114 &114434151377597002
 MonoBehaviour:
   m_ObjectHideFlags: 1
