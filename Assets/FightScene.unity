@@ -297,13 +297,14 @@ GameObject:
   - component: {fileID: 125008340}
   - component: {fileID: 125008339}
   - component: {fileID: 125008341}
+  - component: {fileID: 125008342}
   m_Layer: 5
   m_Name: SelectOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &125008338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -375,6 +376,18 @@ MonoBehaviour:
   FightButtons: {fileID: 1595739916}
   Items: {fileID: 1119082842}
   Question: {fileID: 761856714}
+--- !u!114 &125008342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125008337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f75a1c029d5045c3be4d3ac49ca90ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestionForBattle: {fileID: 0}
 --- !u!1 &134299875
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +512,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 134299875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f46a476db1a54edebe9e2cd5d111755, type: 3}
+  m_Script: {fileID: 11500000, guid: 713dee6e5afb94ea6b9a6bf963075c16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &163939810
@@ -564,9 +577,9 @@ RectTransform:
   m_GameObject: {fileID: 180638815}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2143212913}
+  m_Father: {fileID: 1252415097}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -598,8 +611,8 @@ MonoBehaviour:
     m_FontSize: 2
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 35
+    m_MinSize: 2
+    m_MaxSize: 25
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -877,7 +890,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1983520619281468, guid: 09772b8a6cca54da2b83d010dd35f8b2, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09772b8a6cca54da2b83d010dd35f8b2, type: 2}
@@ -1017,6 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f75a1c029d5045c3be4d3ac49ca90ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionForBattle: {fileID: 0}
 --- !u!1 &306071238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1264,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"eat"'
+  m_Text: 
 --- !u!222 &381824986
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6342,6 +6356,75 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 628068351}
   m_CullTransparentMesh: 0
+--- !u!1 &693175407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693175408}
+  - component: {fileID: 693175410}
+  - component: {fileID: 693175409}
+  m_Layer: 5
+  m_Name: EnemyHPColor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &693175408
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693175407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2143212913}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -4.4, y: 3.4}
+  m_SizeDelta: {x: 770, y: 145}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &693175409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693175407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0.5
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &693175410
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693175407}
+  m_CullTransparentMesh: 0
 --- !u!1 &694687706
 GameObject:
   m_ObjectHideFlags: 0
@@ -6427,6 +6510,7 @@ GameObject:
   - component: {fileID: 761856715}
   - component: {fileID: 761856717}
   - component: {fileID: 761856716}
+  - component: {fileID: 761856718}
   m_Layer: 5
   m_Name: Question1
   m_TagString: Untagged
@@ -6440,11 +6524,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 761856714}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2143212913}
+  m_Father: {fileID: 1252415097}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6476,15 +6560,15 @@ MonoBehaviour:
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 15
-    m_MaxSize: 45
+    m_MinSize: 2
+    m_MaxSize: 30
     m_Alignment: 1
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'What ''t'' will this find? /t$/ '
+  m_Text: 
 --- !u!222 &761856717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6492,6 +6576,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 761856714}
   m_CullTransparentMesh: 0
+--- !u!114 &761856718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 761856714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f75a1c029d5045c3be4d3ac49ca90ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestionForBattle: {fileID: 761856714}
 --- !u!1 &784082004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7075,7 +7171,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100056, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5877bb73b9ca347acb44f9d3ab51436f, type: 3}
@@ -7248,6 +7344,8 @@ MonoBehaviour:
   PokeballForPikachu: {fileID: 103714938}
   PikachuHealthBar: {fileID: 2007722120}
   Items: {fileID: 1119082842}
+  Questions: {fileID: 761856714}
+  TrainerUI: {fileID: 953811552}
 --- !u!114 &947743708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8463,7 +8561,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"better"'
+  m_Text: 
 --- !u!222 &981057226
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8770,7 +8868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"eater"'
+  m_Text: 
 --- !u!222 &1114347957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8947,6 +9045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f75a1c029d5045c3be4d3ac49ca90ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionForBattle: {fileID: 0}
 --- !u!1 &1194349335
 GameObject:
   m_ObjectHideFlags: 0
@@ -9135,7 +9234,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 76a69e381a5af404d9cd6f46dd7f9576, type: 3}
@@ -9258,6 +9357,41 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1231290407}
   m_CullTransparentMesh: 0
+--- !u!1 &1252415096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252415097}
+  m_Layer: 5
+  m_Name: Questions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1252415097
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1252415096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 761856715}
+  - {fileID: 180638816}
+  m_Father: {fileID: 2143212913}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1264199594
 GameObject:
   m_ObjectHideFlags: 0
@@ -9878,6 +10012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f75a1c029d5045c3be4d3ac49ca90ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionForBattle: {fileID: 0}
 --- !u!1 &1428317207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100056, guid: 5877bb73b9ca347acb44f9d3ab51436f,
@@ -10042,7 +10177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"tea"'
+  m_Text: 
 --- !u!222 &1463307140
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12280,6 +12415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f75a1c029d5045c3be4d3ac49ca90ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestionForBattle: {fileID: 0}
 --- !u!1 &2143212912
 GameObject:
   m_ObjectHideFlags: 0
@@ -12307,8 +12443,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 761856715}
-  - {fileID: 180638816}
+  - {fileID: 693175408}
+  - {fileID: 1252415097}
   m_Father: {fileID: 134299879}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

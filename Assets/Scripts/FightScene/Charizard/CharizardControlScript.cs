@@ -109,6 +109,7 @@ public class CharizardControlScript : MonoBehaviour {
 
 	IEnumerator waitThenDead()
 	{
+		
 		yield return new WaitForSeconds (2.5f);
 		ScriptForGameController.GameStatus = "enemyIsDead";
 		ScriptForGameController.Instance.gameStatusInfoBar();

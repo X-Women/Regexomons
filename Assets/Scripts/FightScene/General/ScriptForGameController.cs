@@ -20,6 +20,8 @@ public class ScriptForGameController : MonoBehaviour {
     public GameObject PokeballForPikachu;
     public GameObject PikachuHealthBar;
     public GameObject Items;
+    public GameObject Questions;
+    public GameObject TrainerUI;
 
     // Use this for initialization
     void Start () {
@@ -31,15 +33,19 @@ public class ScriptForGameController : MonoBehaviour {
         switch(GameStatus)
         { 
             case "enemyIsDead":
-                InfoText.text = "REGEXIZARD is close to capturing!";
-                // GameStatus = "loadLocationScene";
-                // ConfirmButton.SetActive(true);
-                // StartButtons.SetActive(true);
+                InfoText.text = "REGEXIZARD is close to capturing! Grab a ball!";
+                Questions.gameObject.SetActive(false);
+                TrainerUI.gameObject.SetActive(true);
+                GameStatus = "selectOption";
                 break;
 
+            // case "pickAPokeBall":
+            //     InfoText.text = "Go to Items and grab a Regexball!";
+            //     StartButtons.SetActive(true);
+            //     break;
+
             case "loadLocationScene":
-                // SceneManager.LoadScene(Scene Number)
-                Debug.Log("Loading new scene!");
+                SceneManager.LoadScene(1);
                 break;
 
             case "PikachuIsDead":
@@ -74,8 +80,8 @@ public class ScriptForGameController : MonoBehaviour {
                 GameStatus = "StartButtonsAppear";
                 break;
 
-            case "serenaUsedPokeball":
-                InfoText.text = "SERENA uses Regexball!";
+            case "ashThrewPokeball":
+                InfoText.text = "ASH uses Regexball!";
                 ConfirmButton.SetActive(true);
                 // GameStatus = "caughtRegexmon";
                 break;   
@@ -125,6 +131,7 @@ public class ScriptForGameController : MonoBehaviour {
                 }
 
                 GameStatus = "charizardAttacked";
+                buttonScript.Instance.questionsReboot();
                 // ConfirmButton.gameObject.SetActive(true);
                 break;
 

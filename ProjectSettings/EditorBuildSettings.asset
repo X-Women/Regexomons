@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Regedex.unity
     guid: 2fb525eafc75242fea46f6429d72fbb8
+  - enabled: 1
+    path: Assets/UserProfile.unity
+    guid: 44958d339e6994f48b3e45c2394ee47a
   m_configObjects: {}

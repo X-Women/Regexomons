@@ -2366,11 +2366,11 @@ Prefab:
     - target: {fileID: 13700006, guid: 12305b5a07deb4a7c9df937e40395def, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9faae94b9d4e149c9ac9260d90ba1dfc, type: 2}
+      objectReference: {fileID: 2100000, guid: b8556d9df36434fa6b833a531bc286c1, type: 2}
     - target: {fileID: 13700008, guid: 12305b5a07deb4a7c9df937e40395def, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9faae94b9d4e149c9ac9260d90ba1dfc, type: 2}
+      objectReference: {fileID: 2100000, guid: b8556d9df36434fa6b833a531bc286c1, type: 2}
     - target: {fileID: 13700010, guid: 12305b5a07deb4a7c9df937e40395def, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

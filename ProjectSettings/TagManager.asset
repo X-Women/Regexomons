@@ -22,8 +22,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - pokemon
+  - background
   - 
   - 
   - 
@@ -48,4 +48,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1966440761
     locked: 0

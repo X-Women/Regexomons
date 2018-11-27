@@ -22,8 +22,6 @@ public class GoPokeball : MonoBehaviour {
 
 	public void catchEnemy()
 	{
-		ScriptForGameController.GameStatus = "serenaUsedPokeball";
-		ScriptForGameController.Instance.gameStatusInfoBar();
 		ScriptForGameController.Instance.Items.gameObject.SetActive(false);
 		// ScriptForGameController.Instance.StartButtons.gameObject.SetActive(true);
 		StartCoroutine(waitCharizardInBall());
@@ -36,6 +34,7 @@ public class GoPokeball : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(2f);
 		GameObject.FindGameObjectWithTag("CharizardGO").SetActive(false);
+		ScriptForGameController.GameStatus = "selectOptions";
 		 audioControl.Instance.enemyInPokeballSound.Play();
 		ScriptForGameController.GameStatus = "caughtRegexmon";
 		ScriptForGameController.Instance.ConfirmButton.SetActive(true);
