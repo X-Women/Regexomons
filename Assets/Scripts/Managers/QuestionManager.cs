@@ -14,13 +14,17 @@ public class QuestionManager : MonoBehaviour
     {    
         Router.GetLevelOneQuestions().GetValueAsync().ContinueWith(task =>
         {
+            levelOneQuestions.Clear();
             DataSnapshot questions = task.Result;
             foreach (DataSnapshot quest in questions.Children)
             {
                 var questionDictionary = (IDictionary<string, object>)quest.Value;
                 QuestionSet newQuestion = new QuestionSet(questionDictionary);
+                Debug.Log("newQuestion.question " + newQuestion.question);
                 levelOneQuestions.Add(newQuestion);
             }
+            Debug.Log("What is the length?: " + levelOneQuestions.Count);
+            Debug.Log("What is at index 0: " + levelOneQuestions[0].question);
         });
 
     }
