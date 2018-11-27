@@ -47,7 +47,7 @@ public class CharizardControlScript : MonoBehaviour {
 
 	public void charizardAppeared()
 	{
-		//sound for charizard
+		audioControl.Instance.charizardStartSound.Play();
 		
 	}
 
@@ -78,7 +78,7 @@ public class CharizardControlScript : MonoBehaviour {
         gameObject.GetComponent<Animator>().Play("flamethrower");
         yield return new WaitForSeconds(1f);
         FlameThrowerGO.Play();
-        // play sound
+        audioControl.Instance.flamethrowerSound.Play();
         yield return new WaitForSeconds(0.5f);
 		pikachuControlScript.Instance.flamethrowerFromCharizard(flameThrowerValue);
         GameObject.Find("Pikachu").GetComponent<Animator>().Play("attackFromCharizard");
@@ -109,6 +109,7 @@ public class CharizardControlScript : MonoBehaviour {
 
 	IEnumerator waitThenDead()
 	{
+		
 		yield return new WaitForSeconds (2.5f);
 		ScriptForGameController.GameStatus = "enemyIsDead";
 		ScriptForGameController.Instance.gameStatusInfoBar();
