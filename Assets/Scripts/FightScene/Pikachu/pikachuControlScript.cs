@@ -70,7 +70,7 @@ public class pikachuControlScript : MonoBehaviour {
 		 yield return new WaitForSeconds (0.5f);
 		 Sparks.Play();
 		 yield return new WaitForSeconds (0.5f);
-		 //sound play
+		audioControl.Instance.thundershockSound.Play();	
 		 LightningBolt.gameObject.SetActive(true);
 		 CharizardControlScript.Instance.thunderShockFromPikachu(thunderShockValue);
 		GameObject.FindGameObjectWithTag("CharizardGO").GetComponent<Animator>().Play("collisionWPikachu");

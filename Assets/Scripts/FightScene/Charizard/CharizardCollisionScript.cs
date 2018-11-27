@@ -18,7 +18,8 @@ public class CharizardCollisionScript : MonoBehaviour {
 			// Charizard should animate in attacked position
 			// GameObject.FindGameObjectWithTag("CharizardGO").GetComponent<Animator>().Play("fly");
 			GameObject.Find("Pikachu").GetComponent<Animator>().Play("attackFromCharizard");
-			pikachuControlScript.Instance.flyAttackFromCharizard(0f, collisionWithCharizard);		
+			pikachuControlScript.Instance.flyAttackFromCharizard(0f, collisionWithCharizard);	
+			audioControl.Instance.tackleSound.Play();	
 			// CharizardControlScript.Instance.quickAttackFromPikachu(0f, collisionWithPikachu);
 			// ScriptForGameController.Instance.ConfirmButton.SetActive(true);
 			// put some sound

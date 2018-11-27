@@ -33,8 +33,7 @@ public class PopulateGrid : MonoBehaviour
     }
     void Update()
     {
-        regList = UserRegManager.regexomonList;
-        InitialiseUI();
+   
     }
 
 }
