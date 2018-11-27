@@ -84,7 +84,7 @@ public class FormManager : MonoBehaviour
 
             yield return new WaitForSeconds(1.5f);
             //scene to change to 
-            SceneManager.LoadScene("MapScene"); 
+            SceneManager.LoadScene("MainScene"); 
         }
     }
 

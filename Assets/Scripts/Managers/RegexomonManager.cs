@@ -22,7 +22,7 @@ public class RegexomonManager : MonoBehaviour
                 Regexomon newRegexomon = new Regexomon(regexomonDictionary);
                 //logs all of the Regexomons Names
                 Debug.Log(newRegexomon.name);
-                tempList.Add(newRegexomon);
+                //tempList.Add(newRegexomon);
             }
         });
     }

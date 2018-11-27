@@ -1,33 +1,39 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using Firebase;
+using Firebase.Database;
+using Firebase.Auth;
 
 public class PopulateGrid : MonoBehaviour 
 {
-	public GameObject prefab; //this is our prefab object that will be exposed in the inspector
+	public GameObject prefabRegexomon;
+    public GameObject scrollContainer;                                
+    public List<PlayerRegexomon> regList;
 
-	public int numberToCreate; //number of objects to create.exposed in inspector
-
-	void Start () 
+    void Awake()
 	{
-		Populate();
-	}
-	
+        regList = UserRegManager.regexomonList;
+        InitialiseUI();
 
-	void Update () 
-	{
-		
-	}
+    }
 
-	void Populate()
-	{
-		GameObject newObj; //Create Game object instance
+    void InitialiseUI() {
+        foreach (PlayerRegexomon regexomon in regList) 
+        {
+            CreateRow(regexomon);
+        }
+    }
 
-		for(int i = 0; i < numberToCreate; i++)
-		{
-			newObj = (GameObject)Instantiate(prefab, transform); //Create new instances of our prefab until we've created as many as we specified
-			newObj.GetComponent<Image>().color = Random.ColorHSV(); // Randomize the color of our image
-		}
-	}
+    void CreateRow(PlayerRegexomon regexomon)
+    {
+        GameObject newReg = Instantiate(prefabRegexomon) as GameObject;
+        newReg.GetComponent<RegexomonConfig>().Initialize(regexomon);
+        newReg.transform.SetParent(scrollContainer.transform, false);
+    }
+    void Update()
+    {
+   
+    }
+
 }

@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Firebase;
 using Firebase.Auth;
 using Firebase.Database;
+using System.Threading.Tasks;
+
 
 public class TestQuest : MonoBehaviour {
 
@@ -16,6 +19,8 @@ public class TestQuest : MonoBehaviour {
 
     //this file is just for practice, and can be removed
     void Awake () {
+        var CurrentUserId = FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+        Debug.Log("CurrentUserId" + CurrentUserId);
         //Debug.Log("questionsCout: " + QuestionManager.levelOneQuestions.Count);
         //Debug.Log("question 1: " + QuestionManager.levelOneQuestions[0].question);
         //Debug.Log("answer 1: " + QuestionManager.levelOneQuestions[0].right);
