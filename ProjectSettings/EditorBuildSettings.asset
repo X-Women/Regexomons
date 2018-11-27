@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FightScene.unity
     guid: d56b607790b15467aa20e9c5cbeb5e3d
+  - enabled: 1
+    path: Assets/Regedex.unity
+    guid: 2fb525eafc75242fea46f6429d72fbb8
   m_configObjects: {}
