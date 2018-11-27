@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -336,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: -0.000016782582}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &400049719
@@ -350,8 +350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3dcd66fcb4884e0a80706f3049135cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1189311020651176, guid: e3cd0e3b3fbfd45e699f951c7609c1a8, type: 2}
-  numberToCreate: 100
+  prefabRegexomon: {fileID: 1870238954138518, guid: 2ba5caa4d7f9a4a78b60e9c7c7bb2c9d,
+    type: 2}
+  scrollContainer: {fileID: 961706861}
+  regexomonList: []
 --- !u!114 &400049720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,7 +562,7 @@ RectTransform:
   m_GameObject: {fileID: 961706861}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.3623, y: 1.8874, z: 1}
   m_Children:
   - {fileID: 1490495751}
   - {fileID: 2005307035}
@@ -664,7 +666,7 @@ RectTransform:
   m_GameObject: {fileID: 1044103335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.69998, y: 1, z: 1}
   m_Children:
   - {fileID: 1728085387}
   m_Father: {fileID: 961706862}
