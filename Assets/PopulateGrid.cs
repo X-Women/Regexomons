@@ -31,5 +31,10 @@ public class PopulateGrid : MonoBehaviour
         newReg.GetComponent<RegexomonConfig>().Initialize(regexomon);
         newReg.transform.SetParent(scrollContainer.transform, false);
     }
-    
+    void Update()
+    {
+        regList = UserRegManager.regexomonList;
+        InitialiseUI();
+    }
+
 }

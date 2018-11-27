@@ -143,7 +143,7 @@ MonoBehaviour:
   prefabRegexomon: {fileID: 1456170640635338, guid: 2ba5caa4d7f9a4a78b60e9c7c7bb2c9d,
     type: 2}
   scrollContainer: {fileID: 1716329769}
-  regexomonList: []
+  regList: []
 --- !u!4 &290408172
 Transform:
   m_ObjectHideFlags: 0
