@@ -67,12 +67,15 @@ public class FormManager : MonoBehaviour
         }
         else if (task.IsCompleted)
         {
-            if (operation == "sign up") {
+            if (operation == "sign up")
+            {
                 Firebase.Auth.FirebaseUser newPlayer = task.Result;
-               
+
                 Debug.LogFormat("Welcome to Regexomon {0}!", newPlayer.Email);
 
-                Player player = new Player(newPlayer.Email, 1, 0, "null");
+                PlayerRegexomon initialRegexomon = new PlayerRegexomon("Regapikachu", "https://i.ibb.co/wyPDL2P/Regapikachu.png", "no question", "no answer");
+
+                Player player = new Player(newPlayer.Email, 1, 0, new List<PlayerRegexomon> { initialRegexomon });
                 DatabaseManager.sharedInstance.CreateNewPlayer(player, newPlayer.UserId);
             }
 
