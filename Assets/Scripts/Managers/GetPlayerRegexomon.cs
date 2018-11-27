@@ -15,7 +15,7 @@ public class GetPlayerRegexomon : MonoBehaviour
 
     void Awake()
     {
-        var CurrentUserId = ManageUserId.CurrentUserId;
+        var CurrentUserId = UserIdManager.CurrentUserId;
 
         //Gets player Regexomon
 

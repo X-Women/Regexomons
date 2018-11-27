@@ -20,7 +20,7 @@ public class PopulateGrid : MonoBehaviour
 	{
         regexomonList.Clear();
 
-        var CurrentUserId = ManageUserId.CurrentUserId;
+        var CurrentUserId = UserIdManager.CurrentUserId;
         GameObject newObj; //Create Game object instance
         newObj = (GameObject)Instantiate(prefabRegexomon, transform);
 
