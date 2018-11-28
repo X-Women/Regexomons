@@ -26,7 +26,5 @@ public class UserRegManager : MonoBehaviour {
 
         });
 
-        PlayerRegexomon testRegPlayer = new PlayerRegexomon("YESSSSS!", "http://fake.com", "none", "none");
-        DatabaseManager.sharedInstance.CreateNewRegexomon(testRegPlayer, CurrentUserId);
     }
 }

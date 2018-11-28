@@ -26,21 +26,22 @@ public class GetPlayerRegexomon : MonoBehaviour
                 var regDictionary = (IDictionary<string, object>)regexomon.Value;
 
                 PlayerRegexomon newPlayerRegexomon = new PlayerRegexomon(regDictionary);
-                Debug.Log("Are these the children?" + newPlayerRegexomon.name);
             }
 
         });
 
-        //Gets player Level
+       // Gets player Level
 
         //Router.PlayerWithUID(CurrentUserId).Child("level").GetValueAsync().ContinueWith(task =>
         //{
-        //    DataSnapshot user = task.Result;
+        //    Debug.Log("Working!!");
+        //    DataSnapshot level = task.Result;
+        //    var levelDictionary = (IDictionary<string, object>)level.Value;
+        //    var lev = levelDictionary["level"].ToString();
+        //    Debug.Log("Am I getting the score:" + lev);
 
-        //    var playerDictionary = (IDictionary<string, object>)user.Value;
-        //    Debug.Log("What is the playerDictionary : " + playerDictionary); //logs What is the playerDictionary : System.Collections.Generic.Dictionary`2[System.String,System.Object]
-        //    Player newPlayer = new Player(playerDictionary);
-        //    Debug.Log("What is the new Player : " + newPlayer); //logs nothing 
+
+
         //});
 
 
