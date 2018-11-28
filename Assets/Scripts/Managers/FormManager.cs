@@ -56,14 +56,18 @@ public class FormManager : MonoBehaviour
     public void OnLogin()
     {
         authManager.LoginUser(emailInput.text, passwordInput.text);
-        Debug.Log("login");
+        Debug.Log(emailInput.text);
     }
 
     IEnumerator HandleAuthCallback(Task<Firebase.Auth.FirebaseUser> task, string operation)
     {
         if (task.IsFaulted || task.IsCanceled)
         {
+            Debug.Log("error");
+
+            ErrorMessage.errorMessgae = "Oh no! There was an error with your account! Please SIGN UP or use a valid email. ";
             UpdateStatus("There was an error creating your account.");
+         
         }
         else if (task.IsCompleted)
         {
@@ -88,6 +92,9 @@ public class FormManager : MonoBehaviour
 
             }
 
+            if (operation == "login") {
+                Debug.Log("email found");
+            }
 
             UpdateStatus("Game is loading...");
 
