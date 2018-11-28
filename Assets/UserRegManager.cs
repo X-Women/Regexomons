@@ -26,26 +26,7 @@ public class UserRegManager : MonoBehaviour {
 
         });
 
-        //List<PlayerRegexomon> updatedRegexomonList = regexomonList;
-        PlayerRegexomon testRegPlayer = new PlayerRegexomon("ItWillWork!!", "http://fake.com", "none", "none");
-        DatabaseManager.sharedInstance.CreateNewRegexomon(testRegPlayer, CurrentUserId, regexomonList.Count);
-        //updatedRegexomonList.Add(testRegPlayer);
-        //string json = testRegPlayer.ToDictionary();
-        //.SetRawJsonValueAsync(json);
-        //DatabaseManager.sharedInstance.CreateNewPlayer(player, newPlayer.UserId);
-        //Router.PlayerWithUID(CurrentUserId).Child("score").SetValueAsync(20);
-
-        //Dictionary<string, Object> entryValues = entry.ToDictionary();
-
-        //var key = Router.PlayerWithUID(CurrentUserId).Child("regexomon").Push().Key; //<<to add a key
-
-
-        //Router.PlayerWithUID(CurrentUserId).Child("regexomon").SetValueAsync(json);
+        PlayerRegexomon testRegPlayer = new PlayerRegexomon("YESSSSS!", "http://fake.com", "none", "none");
+        DatabaseManager.sharedInstance.CreateNewRegexomon(testRegPlayer, CurrentUserId);
     }
-    //public void CreateNewRegexomon(PlayerRegexomon regex, string uid)
-    //{
-    //    string playerJSON = JsonUtility.ToJson(regex);
-    //    string test = "1";
-    //    Router.PlayerWithUID(uid).Child("regexomon").Child(test).SetRawJsonValueAsync(playerJSON);
-    //}
 }

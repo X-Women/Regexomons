@@ -24,13 +24,14 @@ public class GetPlayerRegexomon : MonoBehaviour
             foreach (DataSnapshot regexomon in regexomons.Children)
             {
                 var regDictionary = (IDictionary<string, object>)regexomon.Value;
+
                 PlayerRegexomon newPlayerRegexomon = new PlayerRegexomon(regDictionary);
                 Debug.Log("Are these the children?" + newPlayerRegexomon.name);
             }
 
         });
 
-        //Gets player Regexomon
+        //Gets player Level
 
         //Router.PlayerWithUID(CurrentUserId).Child("level").GetValueAsync().ContinueWith(task =>
         //{

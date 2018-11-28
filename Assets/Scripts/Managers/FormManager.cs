@@ -77,6 +77,15 @@ public class FormManager : MonoBehaviour
 
                 Player player = new Player(newPlayer.Email, 1, 0, new List<PlayerRegexomon> { initialRegexomon });
                 DatabaseManager.sharedInstance.CreateNewPlayer(player, newPlayer.UserId);
+
+                //To get better key, impliment below, but right now it breakes
+
+                //string playerJSON = JsonUtility.ToJson(initialRegexomon);
+                //Player player = new Player(newPlayer.Email, 1, 0, new List<PlayerRegexomon> { });
+                //DatabaseManager.sharedInstance.CreateNewPlayer(player, newPlayer.UserId);
+                //string key = Router.PlayerWithUID(newPlayer.UserId).Child("regexomon").Push().Key; //this will create a key
+                //Router.PlayerWithUID(newPlayer.UserId).Child("regexomon").Child(key).SetRawJsonValueAsync(playerJSON);
+
             }
 
 

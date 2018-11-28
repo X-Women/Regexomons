@@ -28,15 +28,4 @@ public class PlayerRegexomon
         this.question = dictionary["question"].ToString();
         this.answer = dictionary["answer"].ToString();
     }
-
-    public Dictionary<string, object> ToDictionary()
-    {
-        Dictionary<string, object> result = new Dictionary<string, object>();
-        result["name"] = name;
-        result["imageUrl"] = imageUrl;
-        result["question"] = question;
-        result["answer"] = answer;
-
-        return result;
-    }
 }

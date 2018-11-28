@@ -20,12 +20,6 @@ public class Router : MonoBehaviour {
     }
 
 
-    //public static DatabaseReference PlayerRegexomon(string uid)
-    //{
-    //    return baseRef.Child("regexomon");
-    //}
-
-
     public static DatabaseReference Regexomons()
     {
         return baseRef.Child("Regexomon");
