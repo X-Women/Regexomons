@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -115,8 +115,18 @@ public class ScriptForGameController : MonoBehaviour {
 
             case "correctAnswer":
                 // InfoText.text = "PIKACHU used QUICKATTACK!";
+                  ScoreScript.scoreValue += 5;
 
-                 int PikachuRandomAttack = Random.Range(0,2);
+                if (ScoreScript.scoreValue >= 40)
+                {
+                    LevelScript.levelValue = 2;
+                }
+                if (ScoreScript.scoreValue >= 80)
+                {
+                    LevelScript.levelValue = 3;
+                }
+
+                int PikachuRandomAttack = Random.Range(0,2);
                 if(PikachuRandomAttack == 0){
                     InfoText.text = "REGEXACHU used QUICKATTACK!";
                     //invoke the quickattack method
