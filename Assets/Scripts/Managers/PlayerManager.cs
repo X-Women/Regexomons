@@ -6,7 +6,7 @@ using Firebase.Database;
 
 public class PlayerManager : MonoBehaviour
 {
-
+    List<QuestionSet> a = QuestionManager.levelOneQuestions;
     public static List<Player> playersList = new List<Player>();
    
     void Awake()
