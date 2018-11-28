@@ -28,5 +28,4 @@ public class PlayerRegexomon
         this.question = dictionary["question"].ToString();
         this.answer = dictionary["answer"].ToString();
     }
-
 }

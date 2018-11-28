@@ -13,15 +13,12 @@ public class UserRegManager : MonoBehaviour {
         regexomonList.Clear();
 
         var CurrentUserId = UserIdManager.CurrentUserId;
-        //GameObject newObj; //Create Game object instance
-        //newObj = (GameObject)Instantiate(prefabRegexomon, transform);
 
         Router.PlayerWithUID(CurrentUserId).Child("regexomon").GetValueAsync().ContinueWith(task =>
         {
             DataSnapshot regexomons = task.Result;
             foreach (DataSnapshot regexomon in regexomons.Children)
             {
-                //newObj = (GameObject)Instantiate(prefabRegexomon, transform);
                 var regDictionary = (IDictionary<string, object>)regexomon.Value;
                 PlayerRegexomon newPlayerRegexomon = new PlayerRegexomon(regDictionary);
                 regexomonList.Add(newPlayerRegexomon);
