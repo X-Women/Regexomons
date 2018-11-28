@@ -32,6 +32,7 @@ public class UserRegManager : MonoBehaviour {
 
         });
 
+
         Router.PlayerWithUID(CurrentUserId).GetValueAsync().ContinueWith(task =>
         {
             DataSnapshot player = task.Result;
@@ -42,6 +43,5 @@ public class UserRegManager : MonoBehaviour {
             score = gotPlayer.score;
 
         });
-
     }
 }
