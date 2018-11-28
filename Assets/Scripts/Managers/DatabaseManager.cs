@@ -50,4 +50,11 @@ public class DatabaseManager : MonoBehaviour
 
     }
 
+    public void CreateNewRegexomon(PlayerRegexomon regex, string uid, int index)
+    {
+        string playerJSON = JsonUtility.ToJson(regex);
+        string key = index.ToString();
+        Router.PlayerWithUID(uid).Child("regexomon").Child(key).SetRawJsonValueAsync(playerJSON);
+    }
+
 }
